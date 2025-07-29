@@ -1,14 +1,14 @@
-import { Router } from 'express';
+import {Router} from 'express';
 import {
-  sendOverdueNotification,
-  sendBulkOverdueNotifications,
-  sendTestEmail,
-  getNotificationStats,
-  getNotificationHistory,
-  deleteNotification,
-  retryFailedNotification
+    sendOverdueNotification,
+    sendBulkOverdueNotifications,
+    sendTestEmail,
+    getNotificationStats,
+    getNotificationHistory,
+    deleteNotification,
+    retryFailedNotification
 } from '../controllers/notificationController';
-import { authenticateToken } from '../middlewares/authenticateToken';
+import {authenticateToken} from '../middlewares/authenticateToken';
 
 const notificationRoutes = Router();
 
