@@ -1,4 +1,4 @@
-import sgMail from '@sendgrid/mail';
+import * as sgMail from '@sendgrid/mail';
 import dotenv from 'dotenv';
 
 dotenv.config(); // Load environment variables from .env file
