@@ -1,10 +1,10 @@
-import  e,{ Request, Response,NextFunction } from "express";
-import { APIError } from "../errors/ApiError";
-import { BookModel } from "../models/book";
+import e, {Request, Response, NextFunction} from "express";
+import {APIError} from "../errors/ApiError";
+import {BookModel} from "../models/book";
 
 export const createBook = async (req: Request, res: Response, next: NextFunction) => {
-    try {    
-     const bookData = {
+    try {
+        const bookData = {
             ...req.body,
             status: req.body.status ? 'available' : 'unavailable'
         };
@@ -58,7 +58,7 @@ export const deleteBook = async (req: Request, res: Response, next: NextFunction
         if (!deletedBook) {
             throw new APIError(404, "Book not found");
         }
-        res.status(200).json({ message: "Book deleted" });
+        res.status(200).json({message: "Book deleted"});
     } catch (error: any) {
         next(error);
     }

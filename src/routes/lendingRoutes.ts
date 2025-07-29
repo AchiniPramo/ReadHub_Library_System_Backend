@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { createLending,getLendings,updateLending } from "../controllers/lendingController";
+import {Router} from "express";
+import {createLending, getLendings, updateLending} from "../controllers/lendingController";
 
 const lendingRoutes = Router();
 

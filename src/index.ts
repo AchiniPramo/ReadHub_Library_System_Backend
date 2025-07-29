@@ -1,8 +1,8 @@
-import express, { Request, Response } from "express"
+import express, {Request, Response} from "express"
 import dotenv from "dotenv"
-import { connectDB } from "./db/mongo"
+import {connectDB} from "./db/mongo"
 import rootRouter from "./routes"
-import { errorHandler } from "./middlewares/errorHandler"
+import {errorHandler} from "./middlewares/errorHandler"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 

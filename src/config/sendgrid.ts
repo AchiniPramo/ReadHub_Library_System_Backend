@@ -13,4 +13,4 @@ if (!SENDGRID_API_KEY) {
     sgMail.setApiKey(SENDGRID_API_KEY);
 }
 
-export { sgMail, SENDER_EMAIL };
+export {sgMail, SENDER_EMAIL};
