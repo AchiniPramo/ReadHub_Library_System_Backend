@@ -1,10 +1,10 @@
-import  e,{ Request, Response,NextFunction } from "express";
-import { APIError } from "../errors/ApiError";
-import{ LendingModel} from "../models/lending";
+import e, {Request, Response, NextFunction} from "express";
+import {APIError} from "../errors/ApiError";
+import {LendingModel} from "../models/lending";
 
 export const createLending = async (req: Request, res: Response, next: NextFunction) => {
     console.log("Creating a new lending record...", req.body);
-    
+
     try {
         const lending = new LendingModel(req.body);
         await lending.save();
@@ -23,7 +23,7 @@ export const getLendings = async (req: Request, res: Response, next: NextFunctio
         next(error);
     }
 }
- export const updateLending = async (req: Request, res: Response, next: NextFunction) => {
+export const updateLending = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const updatedLending = await LendingModel.findByIdAndUpdate(req.params.id, req.body, {
             new: true,

@@ -1,7 +1,7 @@
-import { Router } from "express"
+import {Router} from "express"
 import readerRoutes from "./readerRoutes"
 import bookRoutes from "./bookRoutes"
-import lendingRoutes from "./lendingRoutes" 
+import lendingRoutes from "./lendingRoutes"
 import authRoutes from "./authRoutes"
 import notificationRoutes from "./notificationRoutes"
 
